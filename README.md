@@ -64,10 +64,10 @@ GROUP BY(VENDOR_ID,SUB_EVALUATION_ID)
 ```
 ORDER BY NLSSORT(TABLE_NAME.FIELD,'NLS_SORT=SCHINESE_PINYIN_M')
 ```
-9. mybatis 中的selectKey
+9. mybatis 中的selectKey <br/>
 在创建一条数据时，这条数据的ID是由数据库自增生成的，在mybatis中为了创建一条数据后能拿到这条数据的ID值，在create的SQL语句中可以加入
 ```
-<selectaKey reusltType="int" order="BEFORE" keyProperty="id">
+<selectKey reusltType="int" order="BEFORE" keyProperty="id">
 SELECT VEHIC_CONTRACT_S.nextval FROM DUAL;
 </selectKey>
 ```
